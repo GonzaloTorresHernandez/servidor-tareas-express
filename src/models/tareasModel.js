@@ -3,6 +3,7 @@ const pg = require("../config/conexion");
 const getTareas = async () => {
   try {
     const res = await pg.query("SELECT * FROM tareas");
+    return res.rows;
   } catch (error) {
     throw error;
   }
